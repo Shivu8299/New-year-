@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Surprise for Anushka</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section id="scene-1" class="scene active dark-mode">
+        <canvas id="star-canvas"></canvas>
+        <canvas id="firework-canvas"></canvas>
+        <div class="content-center hidden-content" id="intro-content">
+            <div class="intro-sub">H A P P Y   N E W   Y E A R !</div>
+            <h1 class="year-title">2026</h1>
+            <div class="cat-box">
+                <img src="pop_cat.gif" alt="Pop Cat">
+            </div>
+            <p class="italic-msg">See what i made for you</p>
+            <button class="text-btn" onclick="goToScene(2)">STARTING THE JOURNEY</button>
+        </section>
+
+    <section id="scene-2" class="scene red-mode">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="card-medium" id="main-card">
+                    <img src="santa_top_left.png" class="card-decor-top">
+                    <h2 class="card-title">HAPPY NEW YEAR TO YOU ANUSHKA!</h2>
+                    <p class="card-sub">Thanks for being part of my 2025, now let's make 2026 even better!</p>
+                    
+                    <div class="bbq-semicircle">
+                        <div class="bbq-item">🍢</div>
+                        <div class="bbq-item">🔥</div>
+                        <div class="bbq-item">🍢</div>
+                        <img src="strawberry_jump.gif" class="bbq-cat">
+                    </div>
+
+                    <button class="card-btn" onclick="goToScene(3)">Continue to see more surprises!</button>
+                </div>
+            </div>
+            <div class="envelope-front"></div>
+        </div>
+    </section>
+
+    <section id="scene-3" class="scene light-mode">
+        <div class="bucket-card">
+            <h2 class="bucket-title">Goals for 2026</h2>
+            <h3 class="bucket-sub">Bucket List</h3>
+            <div class="aesthetic-list">
+                <div class="list-row"><span class="tick-box checked">✔</span> 🌍 Visit a place you've always wanted</div>
+                <div class="list-row"><span class="tick-box"></span> 📚 Learn or read more consistently</div>
+                <div class="list-row"><span class="tick-box"></span> 🧘‍♀️ Take better care of mind & body</div>
+                <div class="list-row"><span class="tick-box"></span> ❤️ Spend quality time with loved ones</div>
+            </div>
+            <button class="aesthetic-btn" onclick="goToScene(4)">LET'S GO! ➔</button>
+        </div>
+    </section>
+
+    <section id="scene-4" class="scene light-mode scrollable">
+        <div class="music-header">
+            <p class="handwriting-small">Dedicated To You</p>
+            <h2 class="stylish-title">Songs That Match Your Vibes 🎶</h2>
+        </div>
+
+        <div class="cassette-player" onclick="toggleMusic('high_on_you.mp3', this)">
+            <div class="label">
+                <img src="song1.jpg" class="art-large">
+                <div class="meta">
+                    <p class="t-title">High On You</p>
+                    <p class="t-sub">GOOD VIBES ONLY</p>
+                </div>
+            </div>
+            <div class="mech">
+                <div class="spool"><div class="plus">+</div></div>
+                <div class="wave-box"><canvas class="wave-c"></canvas></div>
+                <div class="spool"><div class="plus">+</div></div>
+            </div>
+        </div>
+
+        <div class="cassette-player" onclick="toggleMusic('for_a_reason.mp3', this)">
+            <div class="label">
+                <img src="song2.jpg" class="art-large">
+                <div class="meta">
+                    <p class="t-title">For a Reason</p>
+                    <p class="t-sub">SOME MOMENTS FEEL RIGHT</p>
+                </div>
+            </div>
+            <div class="mech">
+                <div class="spool"><div class="plus">+</div></div>
+                <div class="wave-box"><canvas class="wave-c"></canvas></div>
+                <div class="spool"><div class="plus">+</div></div>
+            </div>
+        </div>
+
+        <div class="cassette-player" onclick="toggleMusic('dil_ka_jo_haal.mp3', this)">
+            <div class="label">
+                <img src="song1.jpg" class="art-large">
+                <div class="meta">
+                    <p class="t-title">Dil Ka Jo Haal Hai</p>
+                    <p class="t-sub">PERFECT REFLECTIONS</p>
+                </div>
+            </div>
+            <div class="mech">
+                <div class="spool"><div class="plus">+</div></div>
+                <div class="wave-box"><canvas class="wave-c"></canvas></div>
+                <div class="spool"><div class="plus">+</div></div>
+            </div>
+        </div>
+
+        <button class="next-btn-cute" onclick="goToScene(5)">Next Surprises ➔</button>
+        <div class="spacer"></div>
+    </section>
+
+    <section id="scene-5" class="scene light-mode scrollable">
+        <div class="music-header">
+            <p class="handwriting-small">simple, honest & heartfelt</p>
+            <h2 class="stylish-title">A Few Things I Want To Say ✨</h2>
+        </div>
+
+        <div class="flip-note" onclick="this.classList.toggle('flipped')">
+            <div class="f-inner">
+                <div class="f-front pink">
+                    <div class="tape-piece"></div>
+                    <p class="f-text">You make moments feel lighter 🤍</p>
+                </div>
+                <div class="f-back">
+                    <img src="flip1.jpg">
+                    <p class="caption">Stay exactly as you are.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-note" onclick="this.classList.toggle('flipped')">
+            <div class="f-inner">
+                <div class="f-front yellow">
+                    <div class="tape-piece"></div>
+                    <p class="f-text">You're appreciated more than you know 🙂</p>
+                </div>
+                <div class="f-back">
+                    <img src="flip3.jpg">
+                    <div class="stamp-2026">2026</div>
+                    <p class="caption">Valid All Year ✨</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="aesthetic-btn" onclick="goToScene(6)">Next ➔</button>
+        <div class="spacer"></div>
+    </section>
+
+    <section id="scene-6" class="scene light-mode">
+        <div class="cute-square-box">
+            <div class="ferrero-img-container">
+                <img src="ferrero_cat.png">
+            </div>
+            <h2 class="stylish-title-large">Ready for 2026?</h2>
+            <p class="sub-fade">A new chapter is waiting to be written...</p>
+            <button class="ignite-btn" onclick="goToScene(7)">IGNITE THE SPARK ✨</button>
+        </div>
+    </section>
+
+    <section id="scene-7" class="scene light-mode">
+        <div class="content-center">
+            <img src="pop_cat.gif" class="loading-gif">
+            <p class="loading-text-fancy">closing 2025 on a good note...</p>
+            <div class="bar-container"><div class="bar-fill" id="loadBar"></div></div>
+            <p class="bar-perc">PREPARING FOR 2026: <span id="loadText">0%</span></p>
+        </div>
+    </section>
+
+    <section id="scene-8" class="scene light-mode">
+        <div class="letter-aesthetic">
+            <div class="letter-top-blend">
+                <img src="final_cat_blend.png">
+            </div>
+            <div class="letter-content-main">
+                <p class="anu-name">Hey Anuradha,</p>
+                <h2 class="note-head">One Last Note</h2>
+                <p class="note-p">As the new year begins, I just wanted to share a few good thoughts with you.</p>
+                <p class="note-p">I hope the coming year brings you peace, growth, and many small wins.</p>
+                <button class="seal-btn-cute" onclick="goToScene(9)">SEAL IT ✉ 🔒</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="scene-9" class="scene light-mode">
+        <div class="content-center">
+            <h2 class="sealed-label">Sealed ✉</h2>
+            <div class="final-type-box">
+                <p id="finalTypewriter"></p>
+            </div>
+            <button class="restart-btn-final" id="restartBtn" onclick="location.reload()">RESTART THE JOURNEY</button>
+        </div>
+    </section>
+
+    <audio id="player"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

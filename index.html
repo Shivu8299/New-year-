@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Anushka 2026 Surprises</title>
+    <title>Surprise for Anushka</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Dancing+Script:wght@400;700&family=Quicksand:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -19,170 +19,183 @@
                 <img src="pop_cat.gif" alt="Pop Cat">
             </div>
             <p class="italic-msg">See what i made for you</p>
-            <div class="btn-container">
-                <span class="sparkle">✦</span>
-                <button class="text-btn" onclick="goToScene(2)">STARTING THE JOURNEY</button>
-            </div>
-        </div>
-    </section>
+            <button class="text-btn" onclick="goToScene(2)">STARTING THE JOURNEY</button>
+        </section>
 
     <section id="scene-2" class="scene red-mode">
-        <img src="santa_top_left.png" class="corner-decoration top-left-cat">
-        <div class="red-card">
-            <h2 class="greeting-title">HAPPY NEW YEAR TO YOU ANUSHKA!</h2>
-            <p class="greeting-subtitle">Thanks for being part of my 2025, now let's make 2026 even better!</p>
-            <div class="bbq-wrapper">
-                <div class="bbq-icon">🍢🔥</div>
-                <img src="strawberry_jump.gif" class="bbq-cat-small">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="card-medium" id="main-card">
+                    <img src="santa_top_left.png" class="card-decor-top">
+                    <h2 class="card-title">HAPPY NEW YEAR TO YOU ANUSHKA!</h2>
+                    <p class="card-sub">Thanks for being part of my 2025, now let's make 2026 even better!</p>
+                    
+                    <div class="bbq-semicircle">
+                        <div class="bbq-item">🍢</div>
+                        <div class="bbq-item">🔥</div>
+                        <div class="bbq-item">🍢</div>
+                        <img src="strawberry_jump.gif" class="bbq-cat">
+                    </div>
+
+                    <button class="card-btn" onclick="goToScene(3)">Continue to see more surprises!</button>
+                </div>
             </div>
-            <p class="continue-msg">Continue to see more surprises!</p>
-            <button class="red-next-btn" onclick="goToScene(3)">CONTINUE ➔</button>
+            <div class="envelope-front"></div>
         </div>
-        <div class="made-with-care">MADE WITH CARE ❤️ GREETINGS</div>
     </section>
 
     <section id="scene-3" class="scene light-mode">
-        <div class="bucket-container">
+        <div class="bucket-card">
             <h2 class="bucket-title">Goals for 2026</h2>
-            <h3 class="bucket-subtitle">Bucket List</h3>
-            <div class="check-list">
-                <div class="check-item"><span class="box checked"></span> 🌍 Visit a place you've always wanted to see</div>
-                <div class="check-item"><span class="box"></span> 📚 Learn or read more consistently</div>
-                <div class="check-item"><span class="box"></span> 🧘‍♀️ Take better care of your mind and body</div>
-                <div class="check-item"><span class="box"></span> ❤️ Spend quality time with people who matter</div>
+            <h3 class="bucket-sub">Bucket List</h3>
+            <div class="aesthetic-list">
+                <div class="list-row"><span class="tick-box checked">✔</span> 🌍 Visit a place you've always wanted</div>
+                <div class="list-row"><span class="tick-box"></span> 📚 Learn or read more consistently</div>
+                <div class="list-row"><span class="tick-box"></span> 🧘‍♀️ Take better care of mind & body</div>
+                <div class="list-row"><span class="tick-box"></span> ❤️ Spend quality time with loved ones</div>
             </div>
-            <p class="ready-text">Ready to step into 2026?</p>
-            <button class="go-btn" onclick="goToScene(4)">LET'S GO! ➔</button>
+            <button class="aesthetic-btn" onclick="goToScene(4)">LET'S GO! ➔</button>
         </div>
     </section>
 
     <section id="scene-4" class="scene light-mode scrollable">
         <div class="music-header">
-            <p class="vibe-text">Dedicated To You</p>
-            <h2 class="vibe-title">Songs That Match Your Vibes 🎶</h2>
+            <p class="handwriting-small">Dedicated To You</p>
+            <h2 class="stylish-title">Songs That Match Your Vibes 🎶</h2>
         </div>
 
-        <div class="cassette-container" id="cassette-1" onclick="toggleMusic('high_on_you.mp3', this)">
-            <div class="cassette-label">
-                <img src="song1.jpg" class="album-art">
-                <div class="song-meta">
-                    <span class="tape-type">Type II / CrO2</span>
-                    <p class="tape-title">High On You</p>
-                    <p class="tape-sub">GOOD VIBES ONLY</p>
+        <div class="cassette-player" onclick="toggleMusic('high_on_you.mp3', this)">
+            <div class="label">
+                <img src="song1.jpg" class="art-large">
+                <div class="meta">
+                    <p class="t-title">High On You</p>
+                    <p class="t-sub">GOOD VIBES ONLY</p>
                 </div>
-                <div class="side-a">SIDE A</div>
             </div>
-            <div class="tape-mechanism">
-                <div class="wheel left-wheel"><div class="plus-mark">+</div></div>
-                <div class="wave-container"><canvas class="wave-canvas"></canvas></div>
-                <div class="wheel right-wheel"><div class="plus-mark">+</div></div>
+            <div class="mech">
+                <div class="spool"><div class="plus">+</div></div>
+                <div class="wave-box"><canvas class="wave-c"></canvas></div>
+                <div class="spool"><div class="plus">+</div></div>
             </div>
         </div>
 
-        <div class="cassette-container" onclick="toggleMusic('for_a_reason.mp3', this)">
-            <div class="cassette-label">
-                <img src="song2.jpg" class="album-art">
-                <div class="song-meta">
-                    <span class="tape-type">Type II / CrO2</span>
-                    <p class="tape-title">For a Reason</p>
-                    <p class="tape-sub">SOME MOMENTS FEEL RIGHT</p>
+        <div class="cassette-player" onclick="toggleMusic('for_a_reason.mp3', this)">
+            <div class="label">
+                <img src="song2.jpg" class="art-large">
+                <div class="meta">
+                    <p class="t-title">For a Reason</p>
+                    <p class="t-sub">SOME MOMENTS FEEL RIGHT</p>
                 </div>
-                <div class="side-a">SIDE A</div>
             </div>
-            <div class="tape-mechanism">
-                <div class="wheel left-wheel"><div class="plus-mark">+</div></div>
-                <div class="wave-container"><canvas class="wave-canvas"></canvas></div>
-                <div class="wheel right-wheel"><div class="plus-mark">+</div></div>
+            <div class="mech">
+                <div class="spool"><div class="plus">+</div></div>
+                <div class="wave-box"><canvas class="wave-c"></canvas></div>
+                <div class="spool"><div class="plus">+</div></div>
             </div>
         </div>
 
-        <button class="floating-next" onclick="goToScene(5)">NEXT ➔</button>
+        <div class="cassette-player" onclick="toggleMusic('dil_ka_jo_haal.mp3', this)">
+            <div class="label">
+                <img src="song1.jpg" class="art-large">
+                <div class="meta">
+                    <p class="t-title">Dil Ka Jo Haal Hai</p>
+                    <p class="t-sub">PERFECT REFLECTIONS</p>
+                </div>
+            </div>
+            <div class="mech">
+                <div class="spool"><div class="plus">+</div></div>
+                <div class="wave-box"><canvas class="wave-c"></canvas></div>
+                <div class="spool"><div class="plus">+</div></div>
+            </div>
+        </div>
+
+        <button class="next-btn-cute" onclick="goToScene(5)">Next Surprises ➔</button>
         <div class="spacer"></div>
     </section>
 
     <section id="scene-5" class="scene light-mode scrollable">
         <div class="music-header">
-            <p class="vibe-text">simple, honest & heartfelt</p>
-            <h2 class="vibe-title">A Few Things I Want To Say To You ✨</h2>
-            <p class="tap-flip">Tap to flip 🖊</p>
+            <p class="handwriting-small">simple, honest & heartfelt</p>
+            <h2 class="stylish-title">A Few Things I Want To Say ✨</h2>
         </div>
 
-        <div class="sticky-note-wrapper" onclick="this.classList.toggle('is-flipped')">
-            <div class="note-inner">
-                <div class="note-front note-pink">
-                    <div class="tape-top"></div>
-                    <p class="note-text">You make moments feel lighter 🤍</p>
+        <div class="flip-note" onclick="this.classList.toggle('flipped')">
+            <div class="f-inner">
+                <div class="f-front pink">
+                    <div class="tape-piece"></div>
+                    <p class="f-text">You make moments feel lighter 🤍</p>
                 </div>
-                <div class="note-back">
+                <div class="f-back">
                     <img src="flip1.jpg">
-                    <p class="back-caption">Always grateful for you.</p>
+                    <p class="caption">Stay exactly as you are.</p>
                 </div>
             </div>
         </div>
 
-        <div class="sticky-note-wrapper" onclick="this.classList.toggle('is-flipped')">
-            <div class="note-inner">
-                <div class="note-front note-yellow">
-                    <div class="tape-top"></div>
-                    <p class="note-text">You're appreciated more than you know 🙂</p>
+        <div class="flip-note" onclick="this.classList.toggle('flipped')">
+            <div class="f-inner">
+                <div class="f-front yellow">
+                    <div class="tape-piece"></div>
+                    <p class="f-text">You're appreciated more than you know 🙂</p>
                 </div>
-                <div class="note-back">
+                <div class="f-back">
                     <img src="flip3.jpg">
-                    <p class="back-caption">Valid All Year ✨</p>
+                    <div class="stamp-2026">2026</div>
+                    <p class="caption">Valid All Year ✨</p>
                 </div>
             </div>
         </div>
 
-        <button class="pink-next-btn" onclick="goToScene(6)">Next ➔</button>
+        <button class="aesthetic-btn" onclick="goToScene(6)">Next ➔</button>
         <div class="spacer"></div>
     </section>
 
     <section id="scene-6" class="scene light-mode">
-        <div class="ferrero-wrapper">
-            <div class="ferrero-card">
-                <img src="ferrero_cat.png" alt="Ferrero Cat">
+        <div class="cute-square-box">
+            <div class="ferrero-img-container">
+                <img src="ferrero_cat.png">
             </div>
-            <h2 class="ready-title">Ready for 2026?</h2>
-            <p class="chapter-text">A new chapter is waiting to be written...</p>
+            <h2 class="stylish-title-large">Ready for 2026?</h2>
+            <p class="sub-fade">A new chapter is waiting to be written...</p>
             <button class="ignite-btn" onclick="goToScene(7)">IGNITE THE SPARK ✨</button>
         </div>
     </section>
 
     <section id="scene-7" class="scene light-mode">
         <div class="content-center">
-            <img src="pop_cat.gif" class="loader-cat">
-            <p class="closing-text">closing 2025 on a good note...</p>
-            <div class="loading-bar-bg"><div class="loading-bar-fill"></div></div>
-            <p class="loading-perc">PREPARING SOMETHING FOR 2026: <span id="perc">0%</span></p>
+            <img src="pop_cat.gif" class="loading-gif">
+            <p class="loading-text-fancy">closing 2025 on a good note...</p>
+            <div class="bar-container"><div class="bar-fill" id="loadBar"></div></div>
+            <p class="bar-perc">PREPARING FOR 2026: <span id="loadText">0%</span></p>
         </div>
     </section>
 
     <section id="scene-8" class="scene light-mode">
-        <div class="letter-box">
-            <div class="letter-top">
-                <img src="final_cat_blend.png" class="blend-header">
+        <div class="letter-aesthetic">
+            <div class="letter-top-blend">
+                <img src="final_cat_blend.png">
             </div>
-            <div class="letter-content">
-                <p class="hey-anu">Hey Anuradha,</p>
-                <h2 class="note-title">One Last Note</h2>
-                <p class="main-para">As the new year begins, I just wanted to share a few good thoughts with you.</p>
-                <p class="main-para">I hope the coming year brings you peace, growth, and many small wins.</p>
-                <button class="seal-btn" onclick="goToScene(9)">SEAL IT ✉ 🔒</button>
+            <div class="letter-content-main">
+                <p class="anu-name">Hey Anuradha,</p>
+                <h2 class="note-head">One Last Note</h2>
+                <p class="note-p">As the new year begins, I just wanted to share a few good thoughts with you.</p>
+                <p class="note-p">I hope the coming year brings you peace, growth, and many small wins.</p>
+                <button class="seal-btn-cute" onclick="goToScene(9)">SEAL IT ✉ 🔒</button>
             </div>
         </div>
     </section>
 
     <section id="scene-9" class="scene light-mode">
         <div class="content-center">
-            <h2 class="sealed-header">Sealed ✉</h2>
-            <div class="typewriter-box">
-                <p id="type-text"></p>
+            <h2 class="sealed-label">Sealed ✉</h2>
+            <div class="final-type-box">
+                <p id="finalTypewriter"></p>
             </div>
-            <button class="restart-btn" id="restart" onclick="location.reload()">RESTART THE JOURNEY</button>
+            <button class="restart-btn-final" id="restartBtn" onclick="location.reload()">RESTART THE JOURNEY</button>
         </div>
     </section>
 
-    <audio id="global-audio"></audio>
+    <audio id="player"></audio>
     <script src="script.js"></script>
 </body>
 </html>

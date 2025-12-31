@@ -1,0 +1,87 @@
+/* --- GLOBAL & FONTS --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { overflow: hidden; height: 100vh; width: 100vw; background: #000; }
+
+.dark-mode { background: #0a0a1a; color: white; }
+.light-mode { background: #FFF8E7; color: #4a4a4a; }
+.red-mode { background: #d32f2f; color: white; }
+
+.scene { position: absolute; inset: 0; opacity: 0; pointer-events: none; transition: 0.6s; display: flex; flex-direction: column; align-items: center; }
+.scene.active { opacity: 1; pointer-events: all; z-index: 10; }
+.scrollable { overflow-y: auto; display: block; }
+
+/* --- INTRO & FIREWORK --- */
+#star-canvas, #firework-canvas { position: absolute; inset: 0; pointer-events: none; }
+.content-center { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; text-align: center; z-index: 20; position: relative; padding: 20px; }
+.hidden-content { opacity: 0; transform: translateY(20px); transition: 1.5s; }
+.visible-content { opacity: 1; transform: translateY(0); }
+.year-title { font-family: 'Playfair Display', serif; font-size: 5rem; background: linear-gradient(#fff, #f4c430); -webkit-background-clip: text; color: transparent; }
+
+/* --- ENVELOPE & CARD --- */
+.envelope-wrapper { position: relative; margin-top: 100px; width: 300px; height: 200px; background: #b71c1c; }
+.envelope-front { position: absolute; inset: 0; border: 150px solid transparent; border-bottom: 100px solid #e53935; border-top: 0; z-index: 15; }
+.card-medium { 
+    background: white; width: 280px; padding: 30px 15px; border-radius: 8px; color: #d32f2f; 
+    text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+    position: absolute; bottom: 0; left: 10px; z-index: 5;
+    animation: slideOut 2s forwards 1s; 
+}
+@keyframes slideOut { to { transform: translateY(-120px); } }
+
+.card-decor-top { position: absolute; top: -15px; left: -15px; width: 80px; }
+.card-title { font-family: 'Playfair Display'; font-size: 1.1rem; margin-bottom: 10px; }
+.bbq-semicircle { display: flex; justify-content: center; align-items: flex-end; gap: 10px; margin: 20px 0; position: relative; }
+.bbq-cat { width: 50px; }
+.card-btn { background: #d32f2f; color: white; border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; cursor: pointer; }
+
+/* --- BUCKET LIST --- */
+.bucket-card { background: white; width: 85%; border-radius: 20px; padding: 40px 25px; margin-top: 60px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; }
+.bucket-title { font-family: 'Playfair Display'; font-size: 1.8rem; }
+.bucket-sub { font-family: 'Dancing Script'; color: #d32f2f; font-size: 2.2rem; margin-bottom: 25px; }
+.aesthetic-list { text-align: left; }
+.list-row { margin-bottom: 15px; display: flex; align-items: center; gap: 12px; font-weight: 600; color: #555; }
+.tick-box { width: 22px; height: 22px; border: 2px solid #d32f2f; border-radius: 5px; display: flex; align-items: center; justify-content: center; color: #d32f2f; }
+
+/* --- MUSIC --- */
+.art-large { width: 90px; height: 90px; border-radius: 50%; border: 4px solid #c0392b; object-fit: cover; }
+.cassette-player { 
+    width: 340px; background: #c0392b; border-radius: 15px; margin: 25px auto; padding: 15px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); color: white; cursor: pointer; 
+}
+.cassette-player.shaking { animation: smoothShake 0.5s infinite alternate ease-in-out; }
+@keyframes smoothShake { from { transform: rotate(-1deg); } to { transform: rotate(1deg); } }
+
+.label { background: #f5f5f5; border-radius: 10px; display: flex; align-items: center; padding: 10px; color: #333; }
+.mech { display: flex; justify-content: space-around; align-items: center; margin-top: 15px; }
+.spool { width: 40px; height: 40px; background: white; border-radius: 50%; border: 4px solid #333; display: flex; align-items: center; justify-content: center; color: #333; font-weight: 900; }
+.shaking .spool { animation: spin 2s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.wave-box { width: 100px; height: 30px; background: rgba(0,0,0,0.15); border-radius: 5px; }
+
+/* --- FLIP CARDS --- */
+.flip-note { perspective: 1000px; width: 280px; height: 340px; margin: 30px auto; }
+.f-inner { position: relative; width: 100%; height: 100%; transition: 0.8s; transform-style: preserve-3d; }
+.flipped .f-inner { transform: rotateY(180deg); }
+.f-front, .f-back { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 15px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.f-back { transform: rotateY(180deg); background: white; }
+.f-back img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; }
+.f-text { font-family: 'Dancing Script'; font-size: 1.8rem; text-align: center; }
+.pink { background: #ffcdd2; } .yellow { background: #fff9c4; }
+.tape-piece { width: 90px; height: 25px; background: rgba(255,255,255,0.4); position: absolute; top: -10px; left: 50%; transform: translateX(-50%) rotate(-2deg); }
+.stamp-2026 { position: absolute; bottom: 60px; right: 20px; border: 2px solid #d32f2f; color: #d32f2f; padding: 2px 8px; transform: rotate(-15deg); font-weight: bold; }
+
+/* --- FERRERO --- */
+.cute-square-box { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); text-align: center; width: 85%; }
+.ferrero-img-container img { width: 100%; border-radius: 15px; filter: drop-shadow(0 10px 10px rgba(0,0,0,0.1)); }
+
+/* --- LETTER & SEALED --- */
+.letter-aesthetic { background: white; width: 90%; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+.letter-top-blend img { width: 100%; height: 180px; object-fit: cover; mask-image: linear-gradient(black 70%, transparent); }
+.letter-content-main { padding: 30px; text-align: left; }
+.anu-name { font-family: 'Dancing Script'; font-size: 1.6rem; color: #f4c430; }
+.note-head { font-family: 'Playfair Display'; font-size: 2.2rem; margin-bottom: 20px; }
+.note-p { font-size: 1rem; line-height: 1.6; color: #555; margin-bottom: 15px; }
+
+.final-type-box { background: white; padding: 40px 20px; border-radius: 20px; width: 85%; min-height: 120px; }
+#finalTypewriter { font-family: 'Dancing Script'; font-size: 2rem; color: #f4c430; text-align: center; }
+.restart-btn-final { opacity: 0; transition: 1s; border: 2px solid #f4c430; color: #f4c430; background: transparent; padding: 12px 30px; border-radius: 50px; font-weight: bold; margin-top: 30px; }
